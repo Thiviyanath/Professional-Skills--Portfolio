@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050816;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00f5ff, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.section {
+  padding: 120px 8%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  background: rgba(0, 245, 255, 0.12);
+  border-radius: 50%;
+  filter: blur(120px);
+  top: -120px;
+  left: -120px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(129, 140, 248, 0.12);
+  border-radius: 50%;
+  filter: blur(130px);
+  bottom: -150px;
+  right: -150px;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes floatDelay {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(30px) translateX(-20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: floatDelay 10s ease-in-out infinite;
+}
+
