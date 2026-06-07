@@ -60,7 +60,7 @@ function TransformationJourney() {
   ];
 
   return (
-    <section className="section">
+    <section id="growth" className="section">
       <div className="text-center mb-16">
         <p className="text-cyan-400 uppercase tracking-widest text-sm mb-3">
           Transformation Journey

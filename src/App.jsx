@@ -15,6 +15,8 @@ import Achievements from "./components/Achievements";
 import IndustryReadiness from "./components/IndustryReadiness";
 import AnimatedBackground from "./components/AnimatedBackground";
 import LectureHighlights from "./components/LectureHighlights";
+import CSRShowcase from "./components/CSRShowcase";
+import CSRGallery from "./components/CSRGallery";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
       <SkillsDashboard />
       <VivaNotes />
       <EvidenceGallery />
+      <CSRGallery />
+      <CSRShowcase />
       <Footer />
       <TransformationJourney />
       <Achievements />
