@@ -13,10 +13,14 @@ footer {
 
 body {
   margin: 0;
-  background: #050816;
   color: white;
   font-family: "Outfit", sans-serif;
   overflow-x: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,245,255,0.18), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(192,132,252,0.18), transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(56,189,248,0.12), transparent 35%),
+    linear-gradient(135deg, #050816 0%, #0b1026 50%, #050816 100%);
 }
 
 .gradient-text {
@@ -26,70 +30,134 @@ body {
 }
 
 .glass {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 30px rgba(0,245,255,0.05);
 }
 
 .section {
   padding: 120px 8%;
 }
 
-body::before {
-  content: "";
+/* Comic / Artistic Background */
+
+.comic-bg {
   position: fixed;
-  width: 450px;
-  height: 450px;
-  background: rgba(0, 245, 255, 0.12);
-  border-radius: 50%;
-  filter: blur(120px);
-  top: -120px;
-  left: -120px;
-  z-index: -1;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  width: 500px;
-  height: 500px;
-  background: rgba(129, 140, 248, 0.12);
-  border-radius: 50%;
-  filter: blur(130px);
-  bottom: -150px;
-  right: -150px;
-  z-index: -1;
+.comic-halftone {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size: 18px 18px;
+  animation: halftoneMove 25s linear infinite;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px) translateX(0px);
+.comic-shape {
+  position: absolute;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.07);
+  -webkit-text-stroke: 1px rgba(0,245,255,0.35);
+  font-size: 80px;
+  transform: rotate(-12deg);
+  animation: comicFloat 8s ease-in-out infinite;
+}
+
+.shape-one {
+  top: 12%;
+  left: 6%;
+}
+
+.shape-two {
+  top: 18%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.shape-three {
+  bottom: 22%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.shape-four {
+  bottom: 12%;
+  right: 8%;
+  font-size: 60px;
+  animation-delay: 3s;
+}
+
+.shape-five {
+  top: 48%;
+  left: 44%;
+  font-size: 65px;
+  animation-delay: 4s;
+}
+
+.comic-bubble {
+  position: absolute;
+  padding: 14px 22px;
+  border: 2px solid rgba(0,245,255,0.45);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.78);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(0,245,255,0.12);
+  animation: bubbleFloat 7s ease-in-out infinite;
+}
+
+.bubble-one {
+  top: 34%;
+  left: 8%;
+}
+
+.bubble-two {
+  top: 62%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.bubble-three {
+  bottom: 10%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes comicFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-12deg);
   }
+
   50% {
-    transform: translateY(-30px) translateX(20px);
-  }
-  100% {
-    transform: translateY(0px) translateX(0px);
+    transform: translateY(-25px) rotate(-6deg);
   }
 }
 
-@keyframes floatDelay {
-  0% {
-    transform: translateY(0px) translateX(0px);
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
+
   50% {
-    transform: translateY(30px) translateX(-20px);
-  }
-  100% {
-    transform: translateY(0px) translateX(0px);
+    transform: translateY(-18px) scale(1.04);
   }
 }
 
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
+@keyframes halftoneMove {
+  from {
+    background-position: 0 0;
+  }
 
-.animate-float-delay {
-  animation: floatDelay 10s ease-in-out infinite;
+  to {
+    background-position: 150px 150px;
+  }
 }
-
