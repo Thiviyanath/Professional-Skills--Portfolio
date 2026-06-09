@@ -2,13 +2,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-section,
-footer {
-  scroll-snap-align: start;
-  scroll-margin-top: 90px;
 }
 
 body {
@@ -16,31 +9,63 @@ body {
   color: white;
   font-family: "Outfit", sans-serif;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(0,245,255,0.18), transparent 30%),
-    radial-gradient(circle at 80% 10%, rgba(192,132,252,0.18), transparent 35%),
-    radial-gradient(circle at 50% 90%, rgba(56,189,248,0.12), transparent 35%),
-    linear-gradient(135deg, #050816 0%, #0b1026 50%, #050816 100%);
+  background: #050816;
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #00f5ff, #38bdf8, #818cf8, #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.glass {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 0 30px rgba(0,245,255,0.05);
-}
+/* Main Layout */
 
 .section {
   padding: 120px 8%;
 }
 
-/* Comic / Artistic Background */
+.glass {
+  background: rgba(5, 8, 22, 0.78);
+  backdrop-filter: blur(16px);
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow:
+    8px 8px 0 rgba(0,0,0,0.35),
+    0 0 35px rgba(0,245,255,0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ffdd00, #ff4d4d, #00f5ff, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Comic Titles */
+
+.comic-title {
+  font-family: "Bangers", cursive;
+  letter-spacing: 6px;
+  color: #ffffff;
+  text-shadow:
+    4px 4px 0 #ff4d4d,
+    8px 8px 0 #000000;
+}
+
+.comic-heading {
+  font-family: "Bangers", cursive;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow:
+    3px 3px 0 #00f5ff,
+    6px 6px 0 #000000;
+}
+
+.comic-tag {
+  display: inline-block;
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  color: #050816;
+  background: #ffdd00;
+  padding: 6px 16px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #ff4d4d;
+  transform: rotate(-2deg);
+}
+
+/* Comic Background */
 
 .comic-bg {
   position: fixed;
@@ -48,116 +73,82 @@ body {
   z-index: -10;
   overflow: hidden;
   pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 221, 0, 0.30), transparent 18%),
+    radial-gradient(circle at 90% 20%, rgba(255, 77, 77, 0.30), transparent 22%),
+    radial-gradient(circle at 20% 85%, rgba(0, 245, 255, 0.25), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.28), transparent 24%),
+    linear-gradient(135deg, #08111f, #12061f, #050816);
 }
 
-.comic-halftone {
+.comic-dots {
   position: absolute;
   inset: 0;
-  opacity: 0.1;
+  opacity: 0.20;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+    radial-gradient(circle, rgba(255,255,255,0.5) 1.3px, transparent 1.3px);
   background-size: 18px 18px;
-  animation: halftoneMove 25s linear infinite;
+  animation: dotsMove 22s linear infinite;
 }
 
-.comic-shape {
+.comic-word {
   position: absolute;
+  font-family: "Bangers", cursive;
   font-weight: 900;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,0.07);
-  -webkit-text-stroke: 1px rgba(0,245,255,0.35);
-  font-size: 80px;
+  font-size: 72px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.08);
+  -webkit-text-stroke: 2px rgba(255,221,0,0.45);
+  text-shadow: 5px 5px 0 rgba(255,0,70,0.25);
   transform: rotate(-12deg);
-  animation: comicFloat 8s ease-in-out infinite;
+  animation: comicFloat 7s ease-in-out infinite;
 }
 
-.shape-one {
-  top: 12%;
-  left: 6%;
-}
+.word-1 { top: 12%; left: 5%; }
+.word-2 { top: 16%; right: 7%; animation-delay: 1s; -webkit-text-stroke-color: rgba(0,245,255,0.55); }
+.word-3 { bottom: 15%; left: 9%; animation-delay: 2s; -webkit-text-stroke-color: rgba(255,77,77,0.55); }
+.word-4 { bottom: 10%; right: 7%; animation-delay: 3s; font-size: 58px; }
+.word-5 { top: 50%; left: 42%; animation-delay: 4s; font-size: 62px; -webkit-text-stroke-color: rgba(139,92,246,0.55); }
 
-.shape-two {
-  top: 18%;
-  right: 10%;
-  animation-delay: 1s;
-}
-
-.shape-three {
-  bottom: 22%;
-  left: 10%;
-  animation-delay: 2s;
-}
-
-.shape-four {
-  bottom: 12%;
-  right: 8%;
-  font-size: 60px;
-  animation-delay: 3s;
-}
-
-.shape-five {
-  top: 48%;
-  left: 44%;
-  font-size: 65px;
-  animation-delay: 4s;
-}
-
-.comic-bubble {
+.comic-burst {
   position: absolute;
-  padding: 14px 22px;
-  border: 2px solid rgba(0,245,255,0.45);
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.78);
-  border-radius: 999px;
-  backdrop-filter: blur(10px);
-  font-weight: 700;
-  box-shadow: 0 0 25px rgba(0,245,255,0.12);
-  animation: bubbleFloat 7s ease-in-out infinite;
+  width: 220px;
+  height: 220px;
+  background: rgba(255,221,0,0.14);
+  clip-path: polygon(
+    50% 0%, 60% 30%, 90% 10%, 72% 42%,
+    100% 50%, 72% 58%, 90% 90%, 60% 70%,
+    50% 100%, 40% 70%, 10% 90%, 28% 58%,
+    0% 50%, 28% 42%, 10% 10%, 40% 30%
+  );
+  animation: burstSpin 18s linear infinite;
 }
 
-.bubble-one {
-  top: 34%;
-  left: 8%;
-}
+.burst-1 { top: 30%; left: 12%; }
+.burst-2 { bottom: 22%; right: 18%; background: rgba(0,245,255,0.12); animation-delay: 2s; }
+.burst-3 { top: 15%; right: 35%; background: rgba(255,77,77,0.12); animation-delay: 4s; }
 
-.bubble-two {
-  top: 62%;
-  right: 10%;
-  animation-delay: 2s;
-}
-
-.bubble-three {
-  bottom: 10%;
-  left: 40%;
-  animation-delay: 4s;
+@keyframes dotsMove {
+  from { background-position: 0 0; }
+  to { background-position: 160px 160px; }
 }
 
 @keyframes comicFloat {
   0%, 100% {
-    transform: translateY(0) rotate(-12deg);
+    transform: translateY(0) rotate(-12deg) scale(1);
   }
 
   50% {
-    transform: translateY(-25px) rotate(-6deg);
+    transform: translateY(-25px) rotate(-6deg) scale(1.04);
   }
 }
 
-@keyframes bubbleFloat {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-
-  50% {
-    transform: translateY(-18px) scale(1.04);
-  }
-}
-
-@keyframes halftoneMove {
+@keyframes burstSpin {
   from {
-    background-position: 0 0;
+    transform: rotate(0deg) scale(1);
   }
 
   to {
-    background-position: 150px 150px;
+    transform: rotate(360deg) scale(1.05);
   }
 }

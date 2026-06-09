@@ -30,32 +30,39 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
+          <p className="comic-tag mb-6">
+            SPECIAL EDITION 2026
+          </p>
+
           <p className="text-cyan-400 uppercase tracking-[0.35em] mb-5 text-sm">
             Professional Skills Module
           </p>
 
-          <h1 className="text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-            From Student to
-            <span className="gradient-text block">
-              Industry-Ready Professional
-            </span>
+          <h1 className="comic-title text-6xl lg:text-8xl leading-tight mb-4">
+            PROFESSIONAL SKILLS
           </h1>
 
+          <h2 className="text-4xl lg:text-6xl font-extrabold mb-6">
+            <span className="gradient-text">
+              DEVELOPMENT PORTFOLIO
+            </span>
+          </h2>
+
           <p className="text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
-            A reflective digital portfolio showcasing my growth, learning
-            outcomes, professional skills, lecture reflections, and evidence
-            developed throughout the Professional Skills module.
+            From student to industry-ready professional — a reflective digital
+            portfolio showcasing my growth, learning outcomes, lecture
+            reflections, Professional Skills activities and evidence.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-10">
             <a href="#overview">
-              <button className="px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition">
+              <button className="px-8 py-3 rounded-full bg-yellow-300 text-black font-bold border-2 border-black shadow-[5px_5px_0_#ff4d4d] hover:translate-y-1 transition">
                 Explore Portfolio
               </button>
             </a>
 
             <a href="#highlights">
-              <button className="px-8 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition">
+              <button className="px-8 py-3 rounded-full bg-cyan-400 text-black font-bold border-2 border-black shadow-[5px_5px_0_#000] hover:translate-y-1 transition">
                 View Highlights
               </button>
             </a>
@@ -68,7 +75,7 @@ function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                className="px-4 py-2 rounded-full bg-white/8 border border-white/15 text-gray-200"
               >
                 ✓ {skill}
               </motion.span>
@@ -83,8 +90,8 @@ function Hero() {
           className="glass rounded-[2rem] p-8"
         >
           <div className="mb-8">
-            <p className="text-cyan-400 uppercase tracking-widest text-sm mb-2">
-              Portfolio Profile
+            <p className="comic-tag mb-5">
+              PORTFOLIO PROFILE
             </p>
 
             <h2 className="text-3xl font-bold">
@@ -103,15 +110,15 @@ function Hero() {
           <div className="mb-8">
             <div className="flex justify-between mb-3">
               <span className="text-gray-300">Industry Readiness</span>
-              <span className="text-cyan-400 font-semibold">95%</span>
+              <span className="text-yellow-300 font-bold">95%</span>
             </div>
 
-            <div className="w-full h-4 bg-white/10 rounded-full overflow-hidden">
+            <div className="w-full h-4 bg-white/10 rounded-full overflow-hidden border border-white/10">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "95%" }}
                 transition={{ duration: 1.5, delay: 0.4 }}
-                className="h-full bg-cyan-400 rounded-full"
+                className="h-full bg-yellow-300 rounded-full"
               />
             </div>
           </div>
@@ -136,10 +143,10 @@ function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 bg-cyan-400/10 border border-cyan-400/20 rounded-2xl p-5">
+          <div className="mt-8 bg-yellow-300/10 border border-yellow-300/30 rounded-2xl p-5">
             <p className="text-gray-300">
               Module Leader:
-              <span className="text-cyan-400 font-semibold">
+              <span className="text-yellow-300 font-bold">
                 {" "}Ishara Raviharee Weerasinghe
               </span>
             </p>

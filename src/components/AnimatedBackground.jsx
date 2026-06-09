@@ -1,25 +1,17 @@
 function AnimatedBackground() {
   return (
     <div className="comic-bg">
-      <div className="comic-halftone"></div>
+      <div className="comic-dots"></div>
 
-      <div className="comic-shape shape-one">PS</div>
-      <div className="comic-shape shape-two">EQ</div>
-      <div className="comic-shape shape-three">CV</div>
-      <div className="comic-shape shape-four">ETHICS</div>
-      <div className="comic-shape shape-five">VIVA</div>
+      <div className="comic-word word-1">PS!</div>
+      <div className="comic-word word-2">SKILLS</div>
+      <div className="comic-word word-3">VIVA!</div>
+      <div className="comic-word word-4">ETHICS</div>
+      <div className="comic-word word-5">READY!</div>
 
-      <div className="comic-bubble bubble-one">
-        Communication
-      </div>
-
-      <div className="comic-bubble bubble-two">
-        Interview Ready
-      </div>
-
-      <div className="comic-bubble bubble-three">
-        Professional Growth
-      </div>
+      <div className="comic-burst burst-1"></div>
+      <div className="comic-burst burst-2"></div>
+      <div className="comic-burst burst-3"></div>
     </div>
   );
 }
