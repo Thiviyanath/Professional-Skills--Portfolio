@@ -1,7 +1,7 @@
 export const lectures = [
   {
     title: "Professional Skills & Employability",
-    lecturer: "Ishara Raviharee Weerasinghe",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This session introduced the Professional Skills module and explained why employability skills are important for career success.",
     activities: [
@@ -23,7 +23,7 @@ export const lectures = [
   },
   {
     title: "Emotional Intelligence",
-    lecturer: "Guest Lecture",
+    lecturer: "Mrs. Hubika Joshi",
     overview:
       "This lecture focused on understanding emotions and how emotional intelligence affects relationships, leadership and work performance.",
     activities: [
@@ -45,7 +45,7 @@ export const lectures = [
   },
   {
     title: "Professional Responsibilities & Code of Ethics",
-    lecturer: "Nushkan Nismi",
+    lecturer: "Mr. Nukshan Nismi",
     overview:
       "This session explained professional responsibilities, ethics and codes of conduct in the computing profession.",
     activities: [
@@ -67,7 +67,7 @@ export const lectures = [
   },
   {
     title: "Business Ethics in Practice",
-    lecturer: "Shenal Rajakarunanayake",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This lecture explained how ethical principles are applied in real business situations.",
     activities: [
@@ -88,7 +88,7 @@ export const lectures = [
     ]
   },
   {
-    title: "Grooming & Etiquette",
+    title: "Grooming Etiquettes",
     lecturer: "Ms. Oshini Wimalasena",
     overview:
       "This session focused on professional appearance, personal branding, etiquette and first impressions.",
@@ -110,8 +110,8 @@ export const lectures = [
     ]
   },
   {
-    title: "Dining Etiquette",
-    lecturer: "Guest Lecture",
+    title: "Dining Etiquettes",
+    lecturer: "Ms. Samudini Sandalika",
     overview:
       "This lecture explained formal and informal dining behaviour, table manners and professional dining confidence.",
     activities: [
@@ -133,7 +133,7 @@ export const lectures = [
   },
   {
     title: "Email Etiquette",
-    lecturer: "Guest Lecture",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This session focused on professional email writing, formal communication and job application emails.",
     activities: [
@@ -155,7 +155,7 @@ export const lectures = [
   },
   {
     title: "Interview Skills",
-    lecturer: "Guest Lecture",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This lecture explained how to prepare for job interviews and communicate confidently.",
     activities: [
@@ -177,7 +177,7 @@ export const lectures = [
   },
   {
     title: "CV & Cover Letter Writing",
-    lecturer: "Guest Lecture",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This session focused on preparing professional CVs and cover letters for job applications.",
     activities: [
@@ -199,7 +199,7 @@ export const lectures = [
   },
   {
     title: "Negotiation Skills",
-    lecturer: "S. Maneesha Aishcharya",
+    lecturer: "Mrs. Maneesha Aishcharya",
     overview:
       "This lecture introduced negotiation principles, BATNA, communication and win-win agreements.",
     activities: [
@@ -221,7 +221,7 @@ export const lectures = [
   },
   {
     title: "Portfolio Development",
-    lecturer: "Ishara Raviharee Weerasinghe",
+    lecturer: "Mrs. Ishara Weerasinghe",
     overview:
       "This session explained portfolio types, portfolio management and how to present learning evidence professionally.",
     activities: [
@@ -245,34 +245,79 @@ export const lectures = [
 
 export const academicTeam = [
   {
-    name: "Ishara Raviharee Weerasinghe",
-    role: "Professional Skills Lecturer & Module Leader",
-    topic: "Professional Skills, Employability & Portfolio Management",
-    type: "Module Leader"
+    name: "Mrs. Ishara Weerasinghe",
+    role: "Professional Skills Lecturer",
+    topic: "Other Professional Skills Lectures",
+    type: "Module Lecturer",
+    highlights: [
+      "Professional Skills",
+      "Email Etiquette",
+      "Interview Skills",
+      "CV & Cover Letter Writing",
+      "Business Ethics",
+      "Portfolio Development"
+    ]
   },
   {
-    name: "Nushkan Nismi",
-    role: "Assistant Lecturer, Faculty of Computing, SLIIT",
-    topic: "Professional Responsibilities & Codes of Ethics",
-    type: "Guest Lecturer"
+    name: "Mrs. Hubika Joshi",
+    role: "Guest Lecturer",
+    topic: "Emotional Intelligence",
+    type: "Guest Lecturer",
+    highlights: [
+      "Self Awareness",
+      "Self Regulation",
+      "Empathy",
+      "Motivation",
+      "Social Skills"
+    ]
   },
   {
-    name: "Shenal Rajakarunanayake",
-    role: "Department of Industrial Management, University of Moratuwa",
-    topic: "Business Ethics in Practice",
-    type: "Guest Lecturer"
+    name: "Mr. Nukshan Nismi",
+    role: "Guest Lecturer",
+    topic: "Code of Ethics",
+    type: "Guest Lecturer",
+    highlights: [
+      "Professional Ethics",
+      "Code of Conduct",
+      "Computing Responsibility",
+      "Ethical Decision Making"
+    ]
   },
   {
     name: "Ms. Oshini Wimalasena",
-    role: "PhD Reading, MBA UK, B.Bus Aus",
-    topic: "Grooming & Etiquette",
-    type: "Guest Lecturer"
+    role: "Guest Lecturer",
+    topic: "Grooming Etiquettes",
+    type: "Guest Lecturer",
+    highlights: [
+      "Professional Appearance",
+      "First Impressions",
+      "Personal Branding",
+      "Workplace Etiquette"
+    ]
   },
   {
-    name: "S. Maneesha Aishcharya",
-    role: "MBA PIM-USJ, B.Sc. Business Administration Special",
-    topic: "The Art of Negotiation",
-    type: "Guest Lecturer"
+    name: "Ms. Samudini Sandalika",
+    role: "Guest Lecturer",
+    topic: "Dining Etiquettes",
+    type: "Guest Lecturer",
+    highlights: [
+      "Table Manners",
+      "Formal Dining",
+      "Professional Behaviour",
+      "Dining Confidence"
+    ]
+  },
+  {
+    name: "Mrs. Maneesha Aishcharya",
+    role: "Guest Lecturer",
+    topic: "Negotiation Skills",
+    type: "Guest Lecturer",
+    highlights: [
+      "BATNA",
+      "Win-Win Outcomes",
+      "Communication",
+      "Conflict Resolution"
+    ]
   }
 ];
 
