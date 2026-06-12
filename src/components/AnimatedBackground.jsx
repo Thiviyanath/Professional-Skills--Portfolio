@@ -5,7 +5,7 @@ function AnimatedBackground() {
 
       <div className="comic-word word-1">PS!</div>
       <div className="comic-word word-2">SKILLS</div>
-      <div className="comic-word word-3">VIVA!</div>
+      <div className="comic-word word-3">CSR!</div>
       <div className="comic-word word-4">ETHICS</div>
       <div className="comic-word word-5">READY!</div>
 
